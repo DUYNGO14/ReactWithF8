@@ -28,6 +28,7 @@
 //---------
 //1.callback luôn đươc gọi sau khi component mounted
 //2. Cleanup function luôn được gọi trước khi component unmounted
+//2. Cleanup function luôn được gọi trước khi callback được gọi (trừ lần mounted)
 const tabs = ['posts', 'comments', 'albums'];
 
 import { useState, useEffect } from "react";

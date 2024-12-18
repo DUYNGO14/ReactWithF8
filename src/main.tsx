@@ -8,17 +8,19 @@ import './index.css'
 import Content from './Content.tsx'
 import User_useEffect from './User_useEffect.tsx'
 import CountDown from './CountDown.tsx'
+import Avatar from './Avatar.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <>
-      <CountDown/>
+      {/* <CountDown/> */}
       {/* <App />
       <Gifts/>
       <Two_wayBinding/>
       <ToDoList/>*/}
-      <Content/> 
-      <User_useEffect/>
+      {/* <Content/> 
+      <User_useEffect/> */}
+      <Avatar/>
     </>
   </StrictMode>,
 )
