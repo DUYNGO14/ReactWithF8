@@ -42,7 +42,38 @@ const [users, setUsers] = useState([]); // State for storing user data
                     onClick={() => setType(tab)}>
                         {tab}
                     </button>)}
-        {[...Array(totalPage)].map((_, i) => (
+        
+      <div className="container mx-auto mt-10">
+      <h1 className="text-2xl font-bold mb-5 text-center">User List</h1>
+      <table className="table-auto w-full border-collapse border border-gray-300">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 px-4 py-2">ID</th>
+            <th className="border border-gray-300 px-4 py-2">Avatar</th>
+            <th className="border border-gray-300 px-4 py-2">Name</th>
+            <th className="border border-gray-300 px-4 py-2">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id} className="text-center">
+              <td className="border border-gray-300 px-4 py-2">{user.id}</td>
+              <td className="border border-gray-300 px-4 py-2">
+                <img
+                  src={user.avatar}
+                  alt={`${user.first_name} ${user.last_name}`}
+                  className="w-12 h-12 rounded-full mx-auto"
+                />
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                {user.first_name} {user.last_name}
+              </td>
+              <td className="border border-gray-300 px-4 py-2">{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {[...Array(totalPage)].map((_, i) => (
             <button 
             className="px-4 py-2 mx-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-md hover:from-purple-600 hover:to-pink-600" 
             key={i+1}
@@ -51,18 +82,7 @@ const [users, setUsers] = useState([]); // State for storing user data
                 {i+1}
             </button>
         ))}
-      <h1>User List</h1>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <img src={user.avatar} alt={`${user.first_name} ${user.last_name}`} />
-            <p>
-              {user.first_name} {user.last_name}
-            </p>
-            <p>{user.email}</p>
-          </li>
-        ))}
-      </ul>
+    </div>
     </div>
   );
 }
