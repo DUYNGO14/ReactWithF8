@@ -7,10 +7,12 @@ import './index.css'
 // import ToDoList from './ToDoList.tsx'
 import Content from './Content.tsx'
 import User_useEffect from './User_useEffect.tsx'
+import CountDown from './CountDown.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <>
+      <CountDown/>
       {/* <App />
       <Gifts/>
       <Two_wayBinding/>
