@@ -8,7 +8,6 @@ function CountDown() {
             setCountDown(prev => prev-1)
         }, 1000)
         return () => clearInterval(timerId)
-        return
     },[])
     return (
         <div>
