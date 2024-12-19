@@ -4,6 +4,7 @@ import './index.css'
 import UseMemo1 from './UseMemo.tsx'
 import UseReduce from './UseReduce.tsx'
 import UseReducerWithTodoApp from './UseReducerWithTodoApp.tsx'
+import ItemListContainer from './Components/ItemList/ItemListContainer.tsx'
 // import App from './App.tsx'
 // import Gifts from './Gifts.tsx'
 // import Two_wayBinding from './Two_wayBinding.tsx'
@@ -31,7 +32,8 @@ createRoot(document.getElementById('root')!).render(
       {/* <UseCallBack/> 
       <UseMemo1/>
       <UseReduce/>*/}
-      <UseReducerWithTodoApp/>
+      {/* <UseReducerWithTodoApp/> */}
+      <ItemListContainer/>
     </>
   </StrictMode>,
 )
